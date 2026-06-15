@@ -22,6 +22,12 @@ npm install vehicle-scanner
 
 ## Usage
 
+Create a file named `test.mjs`.
+
+**Important:** Use the `.mjs` extension because the package uses ES Modules.
+
+### test.mjs
+
 ```js
 import { scanVehicle } from "vehicle-scanner";
 
@@ -30,7 +36,13 @@ const result = await scanVehicle("car.jpg");
 console.log(result);
 ```
 
-Output:
+Run:
+
+```bash
+node test.mjs
+```
+
+## Output
 
 ```js
 {
@@ -62,10 +74,17 @@ Output:
 }
 ```
 
+## Requirements
+
+* Node.js 18+
+* Image path must point to a valid vehicle image
+* Supports JPG, JPEG, PNG and WebP images
+
 ## Limitations
 
-* Two-line bike/scooter number plates are not fully supported.
-* Designed primarily for Indian vehicle registration plates.
+* Two-line bike/scooter number plates are not fully supported
+* Designed primarily for Indian vehicle registration plates
+* Image quality significantly affects OCR accuracy
 
 ## License
 
