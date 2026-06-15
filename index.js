@@ -1,0 +1,1 @@
+export { scanVehicle } from "./src/scanVehicle.js";
